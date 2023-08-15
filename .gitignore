@@ -1,2 +1,6 @@
 venv
 settings.py
+.idea
+__pycache__
+.pyc
+.temp
