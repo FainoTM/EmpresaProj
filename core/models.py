@@ -26,8 +26,6 @@ class Cargo(Base):
 
 
 
-
-
 class Funcionario(Base):
     nome = models.CharField(max_length=200)
     biografia = models.TextField(max_length=1000)
@@ -45,3 +43,18 @@ class Funcionario(Base):
 
     def __str__(self):
         return self.nome
+
+
+class Servico(Base):
+    tipo = models.CharField(max_length=200)
+    descricao = models.TextField(max_length=1000)
+    foto = StdImageField(upload_to='servicos',
+                         variations={'thumb': {'width':600, 'height':600, 'crop':True}})
+
+    class Meta:
+        verbose_name = 'Serviço'
+        verbose_name_plural = 'Serviços'
+        ordering = ('tipo',)
+
+    def __str__(self):
+        return self.tipo
