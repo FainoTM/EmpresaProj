@@ -1,3 +1,6 @@
 from django.contrib import admin
+from core.models import Cargo
 
-# Register your models here.
+@admin.register(Cargo)
+class CargoAdimin(admin.ModelAdmin):
+    pass
