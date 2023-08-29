@@ -4,4 +4,5 @@ from core import views
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='home'),
+    path('detalheservico/<pk>', views.ServicoDatailView.as_view(), name='detalheservico'),
 ]

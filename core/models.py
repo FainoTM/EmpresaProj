@@ -1,8 +1,6 @@
 from django.db import models
 from stdimage import StdImageField
 
-# Create your models here.
-
 
 class Base (models.Model):
     criado = models.DateTimeField(auto_now_add=True)
@@ -23,7 +21,6 @@ class Cargo(Base):
 
     def __str__(self):
         return self.nome
-
 
 
 class Funcionario(Base):
