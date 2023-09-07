@@ -6,7 +6,6 @@ from core.models import Funcionario, Servico
 from core.forms import ContatoForm
 
 
-
 class IndexView(FormView):
     template_name = 'index.html'
     form_class = ContatoForm
@@ -28,7 +27,8 @@ class IndexView(FormView):
         messages.error(self.request, message='Não foi possível enviar o e-mail')
         return super(IndexView, self).form_invalid(form)
 
-class ServicoDatailView(DetailView):
+
+class ServicoDetailView(DetailView):
     model = Servico
     template_name = 'servico_detalhe.html'
     
